@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- spring 홈페이지 가서 복사붙이기 함  Spring 컨테이너라고 보면된다 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- 이 패키지 하위의 컴포넌트들을 스캔한다 -->
+    <context:component-scan base-package="kr.co.ch02"/>
+<!-- 옛날 방식이라서 잘 안쓴다. @Component를 더 많이 씀 -->
+    <bean id="ltv" class="kr.co.ch02.sub1.LgTV"> </bean>
+    <bean id="stv" class="kr.co.ch02.sub1.SamsungTV"> </bean>
+    <bean id="spk" class="kr.co.ch02.sub1.Speaker"> </bean>
+
+</beans>
